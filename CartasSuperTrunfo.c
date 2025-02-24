@@ -27,11 +27,11 @@ int main() {
     //CID: Nome da Cidade
     //AREA: Área em km²
     //PIB: PIB
-    
-    int POP1, POP2, POP3, POP4, PT1, PT2, PT3, PT4, COD1, COD2, COD3, COD4;
-    char EST1, EST2, EST3, EST4;
-    char CID1[50], CID2[50], CID3[50], CID4[50];
-    float AREA1, AREA2, AREA3, AREA4, PIB1, PIB2, PIB3, PIB4;
+
+    int POP1, POP2, PT1, PT2, COD1, COD2;
+    char EST1, EST2;
+    char CID1[50], CID2[50];
+    float AREA1, AREA2, PIB1, PIB2;
 
     // Diálogo:
 
@@ -111,111 +111,106 @@ int main() {
     printf("\nÓtimo, agora escolha o número de pontos turísticos que sua cidade terá!\n");
     scanf("%f", &PT2);
 
-    // Terceira Carta:
+    printf("\n");
 
-    printf("\nPara começar a registrar sua terceira carta escolha um estado, entre a letra A até H!\n");
-    scanf(" %c", &EST3);
+    // Resultado do Jogo
 
-    printf("\nMuito bem, agora que você escolheu um estado, escolha um número para essa carta(entre 01 e 04)!\n");
-    scanf("%d", &COD3);
+    // Resultado População
 
-    printf("\nBoa, agora escolha um nome para a cidade, uma única palavra!\n");
-    scanf("%s", &CID3);
+    if (POP1 > POP2)
+    {
+        printf("%s ganhou em quesito População!\n", &CID1);
+        printf("\n");
+        printf("%s:" "%d\n", CID1, POP1);
+        printf("%s:" "%d\n", CID2, POP2);
+        printf("\n");
+    }
+    else
+        if (POP1 < POP2) {
+        printf("%s ganhou em quesito População!\n", &CID2);
+        printf("\n");
+        printf("%s:" "%d\n", CID2, POP2);
+        printf("%s:" "%d\n", CID1, POP1);
+        printf("\n");
+        }
+        else {
+            printf("Empate, mesma quantidade em quesito População!\n");
+            printf("\n");
+        }
+            
+    // Resultado Tamanho em km²
 
-    printf("\nÓtimo nome, agora escolha o tamanho da população de sua cidade!\n");
-    scanf("%d", &POP3);
+    if (AREA1 > AREA2)
+    {
+        printf("%s ganhou em quesito Área!\n", &CID1);
+        printf("\n");
+        printf("%s:" "%f\n", CID1, AREA1);
+        printf("%s:" "%f\n", CID2, AREA2);
+        printf("\n");
+    }
+    else 
+        if (AREA1 < AREA2) {
+        printf("%s ganhou em quesito Área!\n", &CID2);
+        printf("\n");
+        printf("%s:" "%f\n", CID2, AREA2);
+        printf("%s:" "%f\n", CID1, AREA1);
+        printf("\n");
+        }
+        else {
+            printf("Empate, mesma quantidade em quesito Área!\n");
+            printf("\n");
+        }
 
-    printf("\nOk, agora escolha o tamanho da sua cidade em km²!\n");
-    scanf("%f", &AREA3);
+    // Resultado PIB
 
-    printf("\nÓtimo, agora escolha um PIB para sua cidade!\n");
-    scanf("%f", &PIB3);
+    if (PIB1 > PIB2)
+    {
+        printf("%s ganhou em quesito PIB!\n", &CID1);
+        printf("\n");
+        printf("%s:" "%d\n", CID1, PIB1);
+        printf("%s:" "%d\n", CID2, PIB2);
+        printf("\n");
+    }
+    else 
+        if (PIB1 < PIB2) {
+        printf("%s ganhou em quesito PIB!\n", &CID2);
+        printf("\n");
+        printf("%s:" "%f\n", CID2, PIB2);
+        printf("%s:" "%f\n", CID1, PIB1);
+        printf("\n");
+        }
+        else {
+            printf("Empate, mesma quantidade em quesito PIB!\n");
+            printf("\n");
+        }
 
-    printf("\nÓtimo, agora escolha o número de pontos turísticos que sua cidade terá!\n");
-    scanf("%f", &PT3);
+    // Resultado Pontos Turisticos
 
-    // Quarta Carta
-
-    printf("\nPara começar a registrar sua quarta carta escolha um estado, entre a letra A até H!\n");
-    scanf(" %c", &EST4);
-
-    printf("\nMuito bem, agora que você escolheu um estado, escolha um número para essa carta(entre 01 e 04)!\n");
-    scanf("%d", &COD4);
-
-    printf("\nBoa, agora escolha um nome para a cidade, uma única palavra!\n");
-    scanf("%s", &CID4);
-
-    printf("\nÓtimo nome, agora escolha o tamanho da população de sua cidade!\n");
-    scanf("%d", &POP4);
-
-    printf("\nOk, agora escolha o tamanho da sua cidade em km²!\n");
-    scanf("%f", &AREA4);
-
-    printf("\nÓtimo, agora escolha um PIB para sua cidade!\n");
-    scanf("%f", &PIB4);
-
-    printf("\nÓtimo, agora escolha o número de pontos turísticos que sua cidade terá!\n");
-    scanf("%f", &PT4);
-    printf("\n\n\n");
-
-    // Visualizar Cartas
-
-    printf("Muito bem, agora que você registrou todas as cartas, vamos visualiza-las! Digite '1' para ver as 2 primeiras cartas!");
-    scanf("%d", &continuar);
-    printf("\n\n\n");
-
-
-    // Visualizador da Carta 1
-
-    printf("Estado: %c\n", EST1);
-    printf("Código da Carta: %d\n", COD1);
-    printf("Nome da Cidade: %s\n", CID1);
-    printf("População: %d\n", POP1);
-    printf("Área: %f\n", AREA1);
-    printf("PIB: %f\n", PIB1);
-    printf("Número de Pontos Turísticos: %d\n", PT1);
-    printf("\n\n");
-
-    // Visualizador da Carta 2
-
-    printf("Estado: %c\n", EST2);
-    printf("Código da Carta: %d\n", COD2);
-    printf("Nome da Cidade: %s\n", CID2);
-    printf("População: %d\n", POP2);
-    printf("Área: %f\n", AREA2);
-    printf("PIB: %f\n", PIB2);
-    printf("Número de Pontos Turísticos: %d\n", PT2);
-    printf("\n\n");
-
-    // Visualizar Cartas 2
-
-    printf("Digite '1' para ver a 3° e 4° carta!");
-    scanf("%d", &continuar);
-    printf("\n\n\n");
-
-    // Visualizador da Carta 3
-
-    printf("Estado: %c\n", EST3);
-    printf("Código da Carta: %d\n", COD3);
-    printf("Nome da Cidade: %s\n", CID3);
-    printf("População: %d\n", POP3);
-    printf("Área: %f\n", AREA3);
-    printf("PIB: %f\n", PIB3);
-    printf("Número de Pontos Turísticos: %d\n", PT3);
-    printf("\n\n");
-
-    // Visualizador da Carta 4
-
-    printf("Estado: %c\n", EST4);
-    printf("Código da Carta: %d\n", COD4);
-    printf("Nome da Cidade: %s\n", CID4);
-    printf("População: %d\n", POP4);
-    printf("Área: %f\n", AREA4);
-    printf("PIB: %f\n", PIB4);
-    printf("Número de Pontos Turísticos: %d\n", PT4);
+    if (PT1 > PT2)
+    {
+        printf("%s ganhou em quesito Pontos Turisticos!\n", &CID1);
+        printf("\n");
+        printf("%s:" "%d:\n", CID1, PT1);
+        printf("%s:" "%d:\n", CID2, PT2);
+        printf("\n");
+    }
+    else 
+        if (PT1 < PT2) {
+        printf("%s ganhou em quesito Pontos Turisticos!\n", &CID2);
+        printf("\n");
+        printf("%s:" "%d\n", CID2, PT2);
+        printf("%s:" "%d\n", CID1, PT1);
+        printf("\n");
+        }
+        else {
+            printf("Empate, mesma quantidade em quesito Pontos Turísticos!\n");
+            printf("\n");
+        }
+    
 
     printf("\n\n");
     printf("Esse foi o jogo, obrigado por jogar, atualizações em breve! Desenvolvedor: Lucas Ravi");
+    printf("\n");
 
     return 0;
 
